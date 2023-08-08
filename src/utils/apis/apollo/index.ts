@@ -21,7 +21,7 @@ const errorLink = onError(({ graphQLErrors }) => {
     });
 });
 const httpLink = new HttpLink({
-  uri: '',
+  uri: 'https://beta.pokeapi.co/graphql/v1beta',
   credentials: 'same-origin',
 });
 
