@@ -10,13 +10,13 @@ const config: CodegenConfig = {
   generates: {
     // 실 사용
     'src/graphql/generated.ts': {
-      schema: '',
+      schema: 'https://beta.pokeapi.co/graphql/v1beta',
       documents: 'src/graphql/**/*.gql',
       config: { scalars },
       plugins: ['typescript'],
     },
     'graphql/': {
-      schema: '',
+      schema: 'https://beta.pokeapi.co/graphql/v1beta',
       documents: 'src/graphql/**/*.gql',
       preset: 'near-operation-file',
       presetConfig: {
@@ -27,22 +27,22 @@ const config: CodegenConfig = {
     },
 
     // msw
-    'src/mocks/graphql/schema/generated.ts': {
-      schema: ['src/mocks/graphql/schema/mock.schema.gql'],
-      documents: 'src/mocks/**/*.gql',
-      config: { scalars },
-      plugins: ['typescript'],
-    },
-    'mocks/': {
-      schema: 'src/mocks/graphql/schema/**/mock.schema.gql',
-      documents: 'src/mocks/**/*.gql',
-      preset: 'near-operation-file',
-      presetConfig: {
-        baseTypesPath: `~@/mocks/graphql/schema/generated`,
-        extension: '.graphql.ts',
-      },
-      plugins: ['typescript-operations', 'typescript-msw', 'typescript-react-apollo'],
-    },
+    // 'src/mocks/graphql/schema/generated.ts': {
+    //   schema: ['src/mocks/graphql/schema/mock.schema.gql'],
+    //   documents: 'src/mocks/**/*.gql',
+    //   config: { scalars },
+    //   plugins: ['typescript'],
+    // },
+    // 'mocks/': {
+    //   schema: 'src/mocks/graphql/schema/**/mock.schema.gql',
+    //   documents: 'src/mocks/**/*.gql',
+    //   preset: 'near-operation-file',
+    //   presetConfig: {
+    //     baseTypesPath: `~@/mocks/graphql/schema/generated`,
+    //     extension: '.graphql.ts',
+    //   },
+    //   plugins: ['typescript-operations', 'typescript-msw', 'typescript-react-apollo'],
+    // },
   },
   config: {
     enumsAsTypes: true,
