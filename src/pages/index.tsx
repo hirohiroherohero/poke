@@ -1,5 +1,7 @@
+import List from '@/components/List';
+
 const Home = () => {
-  return <div>홈</div>;
+  return <List />;
 };
 
 export default Home;
