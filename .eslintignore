@@ -1,0 +1,14 @@
+# config
+commitlint.config.js
+next.config.js
+
+# msw
+mockServiceWorker.js
+
+# codegen
+**.graphql.ts
+generated.ts
+
+# typescript coverage report
+.type-coverage
+coverage-ts
